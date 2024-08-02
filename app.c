@@ -83,11 +83,11 @@ void app_process_action(void)
 
     if (status == SL_STATUS_OK) {
         printf("Raw Temp: %d, Raw Humidity: %u\n", temp_data, rh_data);
+        /*
+        int32_t temperature = (((temp_data) * 21965L) >> 13) - 46850;
+        uint32_t humidity = (((rh_data) * 15625L) >> 13) - 6000;
 
-        float temperature = temp_data / 1000.0;
-        float humidity = rh_data / 1000.0;
-
-        printf("Temperature: %.2f C, Humidity: %.2f %%\n", temperature, humidity);
+        printf("Temperature: %d C, Humidity: %u %%\n", temperature, humidity);*/
     } else {
         printf("Error reading sensor data\n");
     }
